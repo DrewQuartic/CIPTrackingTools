@@ -1,0 +1,27 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>CIPTrackingTools</Name>
+  <AddInID>{fbb29bef-bffe-4180-ac5c-a5953510fbc6}</AddInID>
+  <Description>Search tools for the CIP Tracking </Description>
+  <Version>1.0</Version>
+  <Image>Images\CIPTrackingTools.png</Image>
+  <Author>Drew Dowling</Author>
+  <Company>Quartic Solutions LLC</Company>
+  <Date>8/7/2012</Date>
+  <Targets>
+    <Target name="Desktop" version="10.0" />
+  </Targets>
+  <AddIn language="CLR" library="CIPTrackingTools.dll" namespace="CIPTrackingTools">
+    <ArcMap>
+      <Commands>
+        <ComboBox id="Quartic_Solutions_LLC_CIPTrackingTools_cboSearch" class="cboSearch" message="list of seach methods" caption="Find By:" tip="Select a search option" category="Quartic Tools" image="Images\cboSearch.png" editable="false" sizeString="WWWWWWWWWWWWWWW" itemSizeString="WWWWWWWWWWWWW" hintText="Select a search method" showCaption="true" />
+      </Commands>
+      <Toolbars>
+        <Toolbar id="Quartic_Solutions_LLC_CIPTrackingTools_CIP_Tracking_Tools" caption="CIP Tracking Tools" showInitially="true">
+          <Items>
+            <ComboBox refID="Quartic_Solutions_LLC_CIPTrackingTools_cboSearch" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
